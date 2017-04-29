@@ -1,0 +1,7 @@
+## APIVersion: 100018
+## Title: TesoDelve Guild
+## Description: Exports guild information for Teso-Delve.com
+## Version 1.0.0
+## SavedVariables: TesoDelveGuild
+
+TesoDelveGuild.lua
