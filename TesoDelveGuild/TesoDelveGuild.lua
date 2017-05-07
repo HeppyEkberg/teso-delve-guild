@@ -6,7 +6,6 @@ TDG.name = 'TesoDelveGuild'
 
 
 TDG.registerEvents = function()
-    d('test')
 
     local inventoryScene = SCENE_MANAGER:GetScene("inventory")
     inventoryScene:RegisterCallback("StateChange", function(oldState, newState)
@@ -69,8 +68,6 @@ TDG.exportRanks = function(guild_id)
         table.insert(ranks, "GUILDRANK:;--;"..table.concat(rank, ';--;') .. ";--;")
     end
 
-    TDG.d('Exported guild ranks');
-
     TDG.vars.ranks[guild_id] = ranks
 end
 
@@ -101,7 +98,6 @@ TDG.exportGuilds = function()
             GetGuildAlliance(guild_id),
         }
 
-
         table.insert(guilds, "GUILD:;--;"..table.concat(guild, ';--;') .. ";--;")
     end
 
@@ -119,8 +115,6 @@ local function initialize(eventCode, addOnName)
     if ( addOnName ~= TDG.name ) then return end
 
     TDG.vars = ZO_SavedVars:NewAccountWide(TDG.name, 1, nil, {})
-
-
     TDG.registerEvents()
 end
 
