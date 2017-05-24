@@ -1,7 +1,8 @@
 
 -- Track component initialization
-TDG                     = {}
+TDG = {}
 TDG.tag = 'TDG'
+TDG.version = '1.0.0'
 TDG.name = 'TesoDelveGuild'
 
 
@@ -106,6 +107,7 @@ TDG.exportGuilds = function()
 end
 
 TDG.export = function()
+    TDG.vars.version = TDG.version
     TDG.exportGuilds();
 end
 
